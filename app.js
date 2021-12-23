@@ -31,7 +31,7 @@ io.on("connection", function (socket) {
   socket.on("player", function (data) {
     console.log("pplayer emit");
     console.log(data);
-    /// io.sockets.emit("getMedia");
+    io.sockets.emit("add2player", data);
   });
 });
 
