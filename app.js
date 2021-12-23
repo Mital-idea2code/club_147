@@ -28,8 +28,9 @@ const io = require("socket.io")(http, {
 io.on("connection", function (socket) {
   console.log("connected");
 
-  socket.on("player", function () {
+  socket.on("player", function (data) {
     console.log("pplayer emit");
+    console.log(data);
     /// io.sockets.emit("getMedia");
   });
 });
