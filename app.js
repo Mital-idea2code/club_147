@@ -33,6 +33,13 @@ io.on("connection", function (socket) {
     console.log(data);
     io.sockets.emit("add2player", data);
   });
+  
+   socket.on("end_game", function (data) {
+    console.log("End Game");
+    console.log(data);
+    io.sockets.emit("player2EndGame", data);
+  });
+  
 });
 
 var port = process.env.PORT || 6262;
