@@ -37,7 +37,7 @@ io.on("connection", function (socket) {
    socket.on("end_game", function (data) {
     console.log("End Game");
     console.log(data);
-    io.sockets.emit("add2player", data);
+    io.sockets.emit("end2player", data);
   });
   
 });
